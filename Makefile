@@ -7,6 +7,7 @@ SRC =
 LDFLAGS = -flto
 
 all: c link
+c++all: c++ link++
 
 c:
 	$(CC) -c main.c $(CFLAGS) $(WFLAGS)
