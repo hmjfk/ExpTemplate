@@ -6,6 +6,7 @@ CXXFLAGS = -std=c++26
 SRC =
 LDFLAGS = -flto
 
+all: c link
 
 c:
 	$(CC) -c main.c $(CFLAGS) $(WFLAGS)
