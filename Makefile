@@ -20,4 +20,4 @@ link++:
 	$(CXX) -o main main.o $(LDFLAGS)
 
 clean:
-	rm *.obj *.o *.exe *.c~ *.cpp~ *.d~ *.di~ *.html
+	rm *.obj *.o *.exe *.c~ *.cpp~ *.d~ *.di~ *.html main
