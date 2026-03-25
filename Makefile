@@ -4,7 +4,7 @@ DC = ldc
 CFLAGS = -std=c2y
 CXXFLAGS = -std=c++26
 DFLAGS = 
-WFLAGS = -pedantic-errors -fanalyzer -Werror -Wextra
+WFLAGS = -pedantic-errors -fanalyzer -Werror -Wall -Wextra
 OFLAGS = -flto -O3
 LDFLAGS = -flto
 
