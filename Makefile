@@ -12,6 +12,15 @@ all: c link
 c++-all: c++ link-c++
 d-all: d link-d
 
+check:
+	$(CC) -S main.c $(CFLAGS) $(WFLAGS) $(OFLAGS) && rm main.S
+
+check++:
+	$(CXX) -S main.cpp $(CXXFLAGS) $(WFLAGS) $(OFLAGS) && rm main.S
+
+checkd:
+	$(DC) -S main.d $(DFLAGS) $(WFLAGS) $(OFLAGS) && rm main.S
+
 c:
 	$(CC) -c main.c $(CFLAGS) $(WFLAGS) $(OFLAGS)
 
@@ -19,15 +28,15 @@ c++:
 	$(CXX) -c main.cpp $(CXXFLAGS) $(WFLAGS) $(OFLAGS)
 
 d:
-	$(CXX) -c main.d $(DFLAGS) $(WFLAGS) $(OFLAGS)
+	$(DC) -c main.d $(DFLAGS) $(WFLAGS) $(OFLAGS)
 
 link:
 	$(CC) -o main main.o $(LDFLAGS)
 
-link-c++:
+link++:
 	$(CXX) -o main main.o $(LDFLAGS)
 
-link-d:
+linkd:
 	$(DC) main.o
 
 clean:
