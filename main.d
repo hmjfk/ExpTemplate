@@ -1,7 +1,7 @@
 
 
 extern (C)
-void main()
+int main()
 {
     return 0;
 }
